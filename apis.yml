@@ -1,8 +1,27 @@
 aid: lapse
 name: Lapse
-description: 'Lapse is a company surfaced as a portfolio company of greylock, gv, speedinvest and added
-  to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Lapse is a London-founded consumer photo company (Lapse Ltd) whose iOS
+  app turns an iPhone into a disposable camera - a one-tap Lock Screen shutter, a film
+  "developing" delay, and a friends-only photo journal built on a "Friends not followers"
+  thesis of no ads, no data sales, and no public follower counts. The app is invite
+  and friends-gated Early Access, free to use, iOS only, and screens uploads with AI
+  moderation; contacts are hashed and encrypted on device. Lapse is backed by Greylock,
+  GV and Speedinvest. It publishes no public API, developer portal, SDKs or documentation
+  as of the July 2026 enrichment pass, so this profile captures company identity, the
+  published policy and support surface, and probed security posture rather than an
+  API surface.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://lapse.com/homepage/images/webclip.png
 url: https://raw.githubusercontent.com/api-evangelist/lapse/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +31,20 @@ x-backed-by:
 - speedinvest
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-no-public-api: true
+x-no-public-api-checked: '2026-07-19'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Consumer
+- Photography
+- Photo Sharing
+- Social
+- Mobile
+- iOS
+- Camera
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -27,3 +54,30 @@ maintainers:
 common:
 - type: Website
   url: https://lapse.com/
+- type: Support
+  url: https://lapse.com/support
+- type: Blog
+  url: https://medium.com/@lapse
+- type: BlogRSS
+  url: https://medium.com/feed/@lapse
+- type: PrivacyPolicy
+  url: https://lapse.com/pdf/Lapse%20-%20Privacy%20Policy.pdf
+- type: TermsOfService
+  url: https://lapse.com/pdf/Lapse%20-%20Terms%20of%20Service.pdf
+- type: AppStore
+  url: https://apps.apple.com/us/app/lapse-disposable-camera/id1636699256
+- type: Instagram
+  url: http://instagram.com/lapse
+- type: TikTok
+  url: https://www.tiktok.com/@getlapse
+- type: DomainSecurity
+  url: security/lapse-domain-security.yml
+- type: WellKnown
+  url: well-known/lapse-well-known.yml
+- type: LLMsTxt
+  url: llms/lapse-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
