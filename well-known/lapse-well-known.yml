@@ -1,0 +1,62 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of the Lapse public hosts
+notes: >-
+  Lapse publishes no /.well-known/ discovery surface. Note that lapse.com and
+  lapse.app serve a username-profile catch-all: any unmatched path returns HTTP
+  200 with the app HTML shell (og:title "@<path> added you"), so a bare status
+  code is not evidence a document exists. Every 200 below was verified to be
+  that HTML catch-all and is recorded as soft_404. Empty is the expected and
+  honest result for a consumer iOS app with no developer program.
+hosts:
+- host: https://lapse.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 200
+    soft_404: true
+    note: returns the HTML username-profile catch-all, not an llms.txt document
+- host: https://lapse.app
+  note: alias of the same Webflow marketing site as lapse.com (lap.se also aliases it)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 200
+    soft_404: true
+- host: https://main-cloudfront.production.journal-api.lapse.app
+  note: >-
+    Internal JSON backend referenced by og:image URLs in the lapse.com page
+    source (/ogImage/username). Returns {"message":"Not Found"} for unknown
+    paths. Undocumented and not a published developer API - recorded here as a
+    probed host only, deliberately NOT wired as an apis[] entry.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404

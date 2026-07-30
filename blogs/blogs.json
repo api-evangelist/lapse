@@ -1,0 +1,28 @@
+{
+  "repo": "lapse",
+  "feeds": [
+    {
+      "source": "https://lapse.com/support",
+      "feed_url": "https://lapse.com/support",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://medium.com/feed/@lapse",
+      "feed_url": "https://medium.com/feed/@lapse",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://medium.com/@lapse",
+      "feed_url": "https://medium.com/feed/@lapse",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 2,
+  "fetched": "2026-07-25T15:00:33Z"
+}
