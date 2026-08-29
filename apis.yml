@@ -10,6 +10,17 @@ description: 'Lapse is a London-founded consumer photo company (Lapse Ltd) whose
   as of the July 2026 enrichment pass, so this profile captures company identity, the
   published policy and support surface, and probed security posture rather than an
   API surface.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
