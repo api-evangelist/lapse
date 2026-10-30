@@ -64,26 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lapse (Lapse Ltd, London) makes an iOS app that turns an iPhone into a disposable camera — a one-tap Lock Screen shutter, a film "developing" delay, and a friends-only photo journal. The product thesis is "Friends not followers": no ads, no data sales, no public follower counts. Access is invite/friends-gated Early Access, the app is free, and it is iOS only.
+Lapse is a London-founded consumer photo company (Lapse Ltd) whose iOS app turns an iPhone into a disposable camera - a one-tap Lock Screen shutter, a film "developing" delay, and a friends-only photo journal built on a "Friends not followers" thesis of no ads, no data sales, and no public follower counts. The app is invite and friends-gated Early Access, free to use, iOS only, and screens uploads with AI moderation; contacts are hashed and encrypted on device. Lapse is backed by Greylock, GV and Speedinvest. It publishes no public API, developer portal, SDKs or documentation as of the July 2026 enrichment pass, so this profile captures company identity, the published policy and support surface, and probed security posture rather than an API surface.
 
-Backed by: Greylock, GV, Speedinvest — https://lapse.com/
+**Areas:** Company · Consumer · Photography · Photo Sharing · Social · Mobile · iOS · Camera
 
-## API status
+## Lapse on APIs.io
 
-**No public API.** As of the 2026-07-19 enrichment pass Lapse publishes no developer portal, documentation, API reference, SDKs, CLI, or public specs. Probing found:
+Everything profiled for Lapse is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lapse/](https://apis.io/providers/lapse/)** — or go straight to one of the APIs or properties below.
 
-- No `/.well-known/` documents on `lapse.com`, `lapse.app`, or the internal backend host — see `well-known/lapse-well-known.yml`.
-- No `api.` / `developer.` / `docs.` / `status.` subdomains (all NXDOMAIN).
-- No first-party client libraries on npm or PyPI.
-- No verifiable Lapse GitHub organization.
+### Published properties
 
-Caution when re-probing: `lapse.com/<anything>` is a **username-profile catch-all** that returns HTTP 200 with the app HTML shell. A 200 alone is not evidence a document exists — verify the body.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts
+#### Security (1)
 
-| Path | Type | Method |
-|---|---|---|
-| `apis.yml` | APIs.json 0.20 index | — |
-| `security/lapse-domain-security.yml` | DomainSecurity | probed |
-| `well-known/lapse-well-known.yml` | WellKnown | searched |
-| `llms/lapse-llms.txt` | LLMsTxt | generated |
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lapse Domain Security](https://apis.io/security/lapse/lapse-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://lapse.com/)
+- [Support](https://lapse.com/support)
+- [Blog](https://medium.com/@lapse)
+- [Terms of service](https://lapse.com/pdf/Lapse%20-%20Terms%20of%20Service.pdf)
+- [Privacy policy](https://lapse.com/pdf/Lapse%20-%20Privacy%20Policy.pdf)
+
+## API Evangelist rating
+
+**Kin Score 11.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lapse/](https://apis.io/providers/lapse/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lapse: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lapse/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
